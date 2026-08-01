@@ -1,14 +1,28 @@
-// Usado metodos para retirar espaços vazios, passar strings para minusculas e se um elemento existe dentro de um array.
+// Usado metodos para retirar espaços vazios, passar strings para minusculas e se um elemento existe dentro de um array. Usado um operador Spread.
+import { livros } from './dadosLivros.js';
+export function buscarLivro(pesquisaLivro, titulo) {
+    const livroBusca = titulo.trim().toUpperCase();
+    const resultado = [];
 
-function buscarLivro(pesquisaLivro, titulo) {
-    const livroBusca = titulo.trim().toLowerCase();
-    const livroEncontrado = pesquisaLivro.filter(item => item.titulo.toLowerCase().includes(livroBusca));
+    for (let i = 0; i < pesquisaLivro.length; i++) {
+        const item = pesquisaLivro[i];
 
-    if (livroEncontrado.length > 0) {
-        return console.log(livroEncontrado);
+        if (item.titulo.toUpperCase().includes(livroBusca)) {
+
+            resultado.push(
+                {
+                    ...item,
+                    titulo: item.titulo.toUpperCase()
+                });
+        }
+    }
+
+
+    if (resultado.length > 0) {
+        return resultado;
     } else {
-        return console.log('Livro não encontrado')
+        return 'Livro não encontrado';
     }
 
 }
-// buscarLivro(livros, 'html')
+console.log(buscarLivro(livros, 'frances'));
