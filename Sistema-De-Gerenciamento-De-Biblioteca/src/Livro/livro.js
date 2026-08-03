@@ -6,4 +6,5 @@ export class Livro {
         this.paginas = paginas;
         this.disponivel = true;
     }
+   
 }

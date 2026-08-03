@@ -1,4 +1,4 @@
-import { livros } from "./dadosLivros.js";
+import { livros } from "../dados/dadosLivros.js";
 
 export function listarDisponiveis() {
     const disponiveis = livros.map(item => {

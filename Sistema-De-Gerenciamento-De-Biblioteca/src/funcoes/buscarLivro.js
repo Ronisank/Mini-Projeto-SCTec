@@ -1,5 +1,4 @@
 // Usado metodos para retirar espaços vazios, passar strings para minusculas e se um elemento existe dentro de um array. Usado um operador Spread.
-import { livros } from './dadosLivros.js';
 export function buscarLivro(pesquisaLivro, titulo) {
     const livroBusca = titulo.trim().toUpperCase();
     const resultado = [];
@@ -25,4 +24,4 @@ export function buscarLivro(pesquisaLivro, titulo) {
     }
 
 }
-console.log(buscarLivro(livros, 'frances'));
+// console.log(buscarLivro(livros, 'frances'));

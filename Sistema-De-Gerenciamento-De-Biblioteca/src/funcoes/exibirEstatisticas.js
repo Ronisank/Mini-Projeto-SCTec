@@ -1,4 +1,3 @@
-import { livros } from "./dadosLivros.js";
 
 export function exibirEstatisticas(livros) {
     const totalLivros = livros.length
@@ -12,8 +11,7 @@ export function exibirEstatisticas(livros) {
         'Quantidade de Livros Disponíveis': livrosDisponiveis,
         'Quantidade de Livros Indisponíveis': livrosIndisponiveis,
         'Total de Páginas considerando todos os livros': totalDePaginas,
-        'Média de Páginas Por Livros': mediaPaginasPorLivros,
+        'Média de Páginas Por Livros': Number(mediaPaginasPorLivros.toFixed(2)),
     });
 
 }
-exibirEstatisticas(livros);
