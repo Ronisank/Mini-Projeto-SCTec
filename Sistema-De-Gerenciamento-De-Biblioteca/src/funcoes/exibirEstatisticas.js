@@ -1,4 +1,3 @@
-
 export function exibirEstatisticas(livros) {
     const totalLivros = livros.length
     const livrosDisponiveis = livros.filter(item => item.disponivel).length

@@ -16,7 +16,6 @@ export function buscarLivro(pesquisaLivro, titulo) {
         }
     }
 
-
     if (resultado.length > 0) {
         return resultado;
     } else {
@@ -24,4 +23,3 @@ export function buscarLivro(pesquisaLivro, titulo) {
     }
 
 }
-// console.log(buscarLivro(livros, 'frances'));

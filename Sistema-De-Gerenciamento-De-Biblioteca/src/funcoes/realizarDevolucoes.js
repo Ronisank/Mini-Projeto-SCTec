@@ -1,4 +1,3 @@
-
 export function realizarDevolucao(livros, titulo) {
     const livro = livros.find((item) => item.titulo.toLowerCase().includes(titulo.toLowerCase()));
 
@@ -12,6 +11,3 @@ export function realizarDevolucao(livros, titulo) {
     return console.log(`Livro se encontra disponivel`);
 
 }
-// console.log(livros,"\n");
-// console.log(devolucaoEmprestimo(livros, 'html'));
-// console.log(livros,"\n");

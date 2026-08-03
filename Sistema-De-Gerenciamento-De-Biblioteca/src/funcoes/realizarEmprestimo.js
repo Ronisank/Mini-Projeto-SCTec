@@ -1,4 +1,3 @@
-
 export function realizarEmprestimo(livros, titulo) {
     const livro = livros.find((item) => item.titulo.toLowerCase().includes(titulo.toLowerCase()));
 
@@ -12,6 +11,3 @@ export function realizarEmprestimo(livros, titulo) {
     return console.log(`O livro ${livro.titulo} não está disponivel`);
 
 }
-// console.log(livros,"\n");
-// console.log(realizarEmprestimo(livros, 'html'));
-// console.log(livros,"\n");

@@ -6,4 +6,3 @@ export function listarLivros(livros) {
         console.table(livro)
     });
 }
-// listarLivros(livros)
