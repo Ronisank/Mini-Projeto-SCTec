@@ -1,15 +1,15 @@
-import promptSync from 'prompt-sync';
+import promptSync from 'prompt-sync'; // como está setado para type: modules, no console quebrava por causa do require.
 const prompt = promptSync();
 
 
 import { livros } from './src/dados/dadosLivros.js';
 import { buscarLivro } from './src/funcoes/buscarLivro.js';
-import { cadastrarLivro } from './src/funcoes/cadastrarLivro.js';
 import { exibirEstatisticas } from './src/funcoes/exibirEstatisticas.js';
 import { listarDisponiveis } from './src/funcoes/listarDisponiveis.js';
 import { listarLivros } from './src/funcoes/listarLivros.js';
 import { realizarDevolucao } from './src/funcoes/realizarDevolucoes.js';
 import { realizarEmprestimo } from './src/funcoes/realizarEmprestimo.js';
+import { Livro } from './src/Livro/livro.js';
 
 
 // Programa Principal
@@ -53,7 +53,8 @@ do {
             const autor = prompt('Digite o autor: ');
             const categoria = prompt('Digite a categoria: ');
             const paginas = Number(prompt('Digite o número de páginas: '))
-            cadastrarLivro(titulo, autor, categoria, paginas);
+            let novoLivro = new Livro(titulo, autor, categoria, paginas)
+            novoLivro.cadastrarLivro();
             break;
         case '5':
             let emprestimo = prompt('Digite o titulo do livro para empréstimo: ')
