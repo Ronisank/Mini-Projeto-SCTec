@@ -26,7 +26,7 @@ do {
     process.stdout.write("\n============== MENU PRINCIPAL =============\n");
     console.log("||                                       ||")
     console.log("|| [1] - Listar acervo de livros         ||");
-    console.log("|| [2] - Buscar                          ||");
+    console.log("|| [2] - Buscar livro por titulo         ||");
     console.log("|| [3] - Listar livros Disponíveis       ||");
     console.log("|| [4] - Cadastrar livro                 ||");
     console.log("|| [5] - Realizar Empréstimo             ||");
@@ -43,7 +43,7 @@ do {
             break;
         case '2':
             let buscar = prompt('Pesquisa: ');
-            console.log(buscarLivro(livros, buscar));
+            console.table(buscarLivro(livros, buscar));
             break;
         case '3':
             listarDisponiveis(livros);
